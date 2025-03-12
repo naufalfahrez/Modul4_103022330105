@@ -46,7 +46,7 @@ class KodeProduk {
                 currentState = FanState.Quite;
             }
 
-            public Static List<Transition>transitions = new List<Transition>
+            public static List<Transition>transitions = new List<Transition>
             {
                 new Transition(FanState.Quite, FanState.Balance, Trigger.modeUp),
                 new Transition(FanState.Quite, FanState.Turbo, Trigger.turboShortcut),
@@ -56,7 +56,6 @@ class KodeProduk {
                 new Transition(FanState.Performance, FanState.Turbo, Trigger.modeUp),
                 new Transition(FanState.Turbo, FanState.Performance, Trigger.modeDown),
                 new Transition(FanState.Turbo, FanState.Quite, Trigger.turboShortcut),
-
             };
 
             public FanState GetNextState(FanState prevstate, FanState nextstate, Trigger trigger)
